@@ -11,9 +11,9 @@ const plusIconStyle = `
     grid-column-start: right;
     grid-row-end: right;
     grid-column-end: content;
-    width: 22px;
+    width: 28px;
     align-items: center;
-    margin-left: 6px;
+    padding-left: 6px;
 `;
 
 // 页面加载完成时触发
@@ -35,6 +35,7 @@ function onLoad() {
             plusDiv.setAttribute('style', plusIconStyle);
             plusDiv.innerHTML = plusIconLight;
             plusDiv.addEventListener('click', async () => {
+                if (addedNode.querySelector('.message-content-recalled') !== null) return;
                 const msgID = plusDiv.getAttribute('msgID');
                 const peer = await window.LLAPI.getPeer()
                 await window.LLAPI.forwardMessage(peer, peer, [msgID])
