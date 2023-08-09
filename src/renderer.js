@@ -5,6 +5,7 @@ const plusIconLight = `
 `;
 
 const plusIconStyle = `
+    cursor: pointer;
     display: flex;
     grid-row-start: content;
     grid-column-start: right;
