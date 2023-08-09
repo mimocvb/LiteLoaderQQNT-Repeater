@@ -5,11 +5,14 @@ const plusIconLight = `
 `;
 
 const plusIconStyle = `
-    cursor: pointer;
-    align-items: center;
     display: flex;
-    justify-content: center;
-    margin-left: 4px;
+    grid-row-start: content;
+    grid-column-start: right;
+    grid-row-end: right;
+    grid-column-end: content;
+    width: 22px;
+    align-items: center;
+    margin-left: 6px;
 `;
 
 // 页面加载完成时触发
@@ -20,9 +23,10 @@ function onLoad() {
 
         if (addedNode.classList && addedNode.classList.contains('ml-item')) {
             if (addedNode.querySelector('.container--self') !== null || 
-            addedNode.querySelector('.msg-content-container') === null) return;
+                addedNode.querySelector('.ptt-message') !== null ||
+                addedNode.querySelector('.msg-content-container') === null) return;
 
-            var wrapper = addedNode.querySelector('.message-content__wrapper');
+            var wrapper = addedNode.querySelector('.message-container');
 
             const plusDiv = document.createElement('div');
             plusDiv.id = "mimo_repeater_btn";

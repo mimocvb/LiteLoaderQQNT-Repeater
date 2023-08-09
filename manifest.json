@@ -4,7 +4,7 @@
     "name": "复读只因",
     "slug": "Repeater",
     "description": "基于Night-stars-1大佬的【LLAPI】调用实现，需安装LLAPI依赖插件",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "thumbnail": "./icon.png",
     "author": {
         "name": "MIMO",
